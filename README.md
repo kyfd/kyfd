@@ -1,23 +1,17 @@
 # kyfd
 
-我是刘丰熙。秋招主要投 Go 后端，平台和 DevOps 也可以看。
+我是刘丰熙。
 
-我写东西比较较真。规则过没过、SQL 有没有真的跑过、通行证能不能用第二次，这些我想能在代码和测试里对上，而不是只在文档里写「支持」。
+秋招在找 Go 后端。平台、DevOps 也看。
 
-## 最近在做的
+[ChangeGuard](https://github.com/kyfd/changeguard) 是我写的变更门禁。SQL / 配置 / K8s 填进一张单，过规则、过审批，CI 拿一张一次性通行证再发。通行证跟文件 hash 绑着，批完再改就过不去。不连生产库。
 
-**[ChangeGuard](https://github.com/kyfd/changeguard)** 是我花时间最多的项目。生产变更先检查、再审批，然后给 CI 发一张一次性通行证。通行证绑的是文件 SHA-256，批完再改文件就会被拦住。它不连生产库，也不接管 Git 或 Kubernetes。
+![ChangeGuard](https://raw.githubusercontent.com/kyfd/changeguard/main/docs/assets/01-change-list.webp)
 
-[v3.0.1](https://github.com/kyfd/changeguard/releases/tag/v3.0.1) 已经发在默认分支上。
+[栖境](https://github.com/kyfd/qijing) 是 Windows 上扫文件用的，看看哪些东西占空间。只扫你点过的目录，默认不联网。[Releases](https://github.com/kyfd/qijing/releases/tag/v0.1.0) 里有包，没签名，SmartScreen 可能会弹。
 
-![ChangeGuard 变更单](https://raw.githubusercontent.com/kyfd/changeguard/main/docs/assets/01-change-list.webp)
+[DVSD-Net](https://github.com/kyfd/DVSD-Net) 是以前做水下鱼计数的，跟现在投的岗位关系不大。
 
-**[栖境](https://github.com/kyfd/qijing)** 是我在 Windows 上给自己用的文件观察工具。默认不联网，只看你授权过的目录，默认只读元数据。真要清理，也只是移进回收站，还得逐项点确认。有未签名的 [Windows 包](https://github.com/kyfd/qijing/releases/tag/v0.1.0)，SmartScreen 可能会拦一下。
+Go, Postgres, Redis, Docker, K8s。
 
-水下鱼群计数的训练代码在 **[DVSD-Net](https://github.com/kyfd/DVSD-Net)**。投算法岗再翻这个，投后端可以略过。
-
-## 技术
-
-日常是 Go、PostgreSQL、Redis、Docker、Kubernetes、GitHub Actions。Windows 客户端用过 Wails，前端会一点 Vue，研究代码是 Python。
-
-邮箱：1027864314@qq.com
+1027864314@qq.com
