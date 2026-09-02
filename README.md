@@ -22,7 +22,7 @@ Go · PostgreSQL · Redis · Docker · Kubernetes · GitHub Actions · Windows /
 | [栖境](https://github.com/kyfd/qijing) | Windows 本地优先、隐私友好的文件观察工具 | 路径安全、最小权限、本地产品工程 |
 | [DVSD-Net](https://github.com/kyfd/DVSD-Net) | 水下鱼群密度估计研究实现 | 仅算法岗 |
 
-投后端 / 平台岗时请从 ChangeGuard 看起。
+投后端 / 平台岗时请从 ChangeGuard 看起。置顶顺序：`changeguard`、`qijing`、`DVSD-Net`。
 
 ### ChangeGuard 在解决什么
 
@@ -59,6 +59,8 @@ Developer / Git Repository
 3. 如何证明 SQL 和回滚实际被验证过？
 
 答案在仓库的 README、[威胁模型](https://github.com/kyfd/changeguard/blob/main/docs/threat-model.md) 和测试里，不在口头承诺里。
+
+![ChangeGuard 变更单：高风险配置和 Kubernetes 被阻断](https://raw.githubusercontent.com/kyfd/changeguard/main/docs/assets/01-change-list.webp)
 
 ## 联系
 
