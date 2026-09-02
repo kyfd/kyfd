@@ -1,68 +1,23 @@
-# Hi, I'm kyfd
+# kyfd
 
-**Go Backend / Platform Engineering / DevSecOps**
+我是刘丰熙。秋招主要投 Go 后端，平台和 DevOps 也可以看。
 
-我关注可靠性、安全边界和工程可验证性：规则检查要能复现，审批后的制品要能绑定，通行证只能用一次，审计链要能离线核对。
+我写东西比较较真。规则过没过、SQL 有没有真的跑过、通行证能不能用第二次，这些我想能在代码和测试里对上，而不是只在文档里写「支持」。
 
-## 求职方向
+## 最近在做的
 
-- 主投：Go 后端、基础架构 / 平台工程、DevOps / DevSecOps / 云原生
-- 次选：Windows 客户端、全栈
-- 算法 / 计算机视觉岗才会把 DVSD-Net 放到第一位
+**[ChangeGuard](https://github.com/kyfd/changeguard)** 是我花时间最多的项目。生产变更先检查、再审批，然后给 CI 发一张一次性通行证。通行证绑的是文件 SHA-256，批完再改文件就会被拦住。它不连生产库，也不接管 Git 或 Kubernetes。
 
-## 熟悉技术栈
+[v3.0.1](https://github.com/kyfd/changeguard/releases/tag/v3.0.1) 已经发在默认分支上。
 
-Go · PostgreSQL · Redis · Docker · Kubernetes · GitHub Actions · Windows / Wails · 少量 Vue / Python
+![ChangeGuard 变更单](https://raw.githubusercontent.com/kyfd/changeguard/main/docs/assets/01-change-list.webp)
 
-## 代表项目
+**[栖境](https://github.com/kyfd/qijing)** 是我在 Windows 上给自己用的文件观察工具。默认不联网，只看你授权过的目录，默认只读元数据。真要清理，也只是移进回收站，还得逐项点确认。有未签名的 [Windows 包](https://github.com/kyfd/qijing/releases/tag/v0.1.0)，SmartScreen 可能会拦一下。
 
-| 项目 | 一句话 | 适合讲什么 |
-| --- | --- | --- |
-| [ChangeGuard](https://github.com/kyfd/changeguard) | 生产变更门禁：检查 SQL / 配置 / Kubernetes，审批后签发一次性通行证 | 一致性、安全边界、发布治理 |
-| [栖境](https://github.com/kyfd/qijing) | Windows 本地优先、隐私友好的文件观察工具 | 路径安全、最小权限、本地产品工程 |
-| [DVSD-Net](https://github.com/kyfd/DVSD-Net) | 水下鱼群密度估计研究实现 | 仅算法岗 |
+水下鱼群计数的训练代码在 **[DVSD-Net](https://github.com/kyfd/DVSD-Net)**。投算法岗再翻这个，投后端可以略过。
 
-投后端 / 平台岗时请从 ChangeGuard 看起。置顶顺序：`changeguard`、`qijing`、`DVSD-Net`。
+## 技术
 
-### ChangeGuard 在解决什么
+日常是 Go、PostgreSQL、Redis、Docker、Kubernetes、GitHub Actions。Windows 客户端用过 Wails，前端会一点 Vue，研究代码是 Python。
 
-```text
-Developer / Git Repository
-          |
-          v
-    Change Submission
-          |
-          v
-  Normalize + Redact + Hash
-          |
-     +----+----+
-     |         |
- Static Rules  PostgreSQL Shadow Validation
-     |         |
-     +----+----+
-          |
-       Review
-          |
-       Approval
-          |
- One-time Passport
-          |
-    CI Verify / Consume
-          |
-       Deployment
-```
-
-三个值得继续问的问题：
-
-1. 如何防止审批后文件被修改？
-2. 如何防止通行证重放或重复使用？
-3. 如何证明 SQL 和回滚实际被验证过？
-
-答案在仓库的 README、[威胁模型](https://github.com/kyfd/changeguard/blob/main/docs/threat-model.md) 和测试里，不在口头承诺里。
-
-![ChangeGuard 变更单：高风险配置和 Kubernetes 被阻断](https://raw.githubusercontent.com/kyfd/changeguard/main/docs/assets/01-change-list.webp)
-
-## 联系
-
-- GitHub：[@kyfd](https://github.com/kyfd)
-- Email：1027864314@qq.com
+邮箱：1027864314@qq.com
